@@ -130,6 +130,8 @@ public class Tester {
         } catch (InvocationTargetException ex) {
             if (ex.getCause() instanceof SuccessException) {
                 ret = true;
+            } else if (ex.getCause() instanceof FailException) {
+                //do nothing
             } else {
                 ex.getCause().printStackTrace();
             }
@@ -179,7 +181,9 @@ public class Tester {
                 if (!(ex.getCause() instanceof SuccessException)) {
                     //not success
                     Logger.error("Test failed, time testing halted");
-                    ex.getCause().printStackTrace();
+                    if (!(ex.getCause() instanceof FailException)) {
+                        ex.getCause().printStackTrace();
+                    }
                     return;
                 }
             }
