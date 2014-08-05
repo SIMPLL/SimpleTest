@@ -52,7 +52,7 @@ public class TheTest {
         Tester.assertTrue(false);
     }
 
-    @Test(name = "This should fail")
+    @Test(name = "This should fail with exception")
     public void testFailException() {
         Tester.assertTrue(5 / 0 > 5);
     }
