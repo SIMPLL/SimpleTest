@@ -78,7 +78,14 @@ java.lang.ArithmeticException: / by zero
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:483)
 	at info.simpll.simpletest.Tester.executeTest(Tester.java:126)
-	at info.simpll.simpletest.Tester.main(Tester.java:214)
+	at info.simpll.simpletest.Tester.main(Tester.java:218)
+> Test case failed!
+> ------------------------
+
+> ------------------------
+> Test case:This should fail
+> Method:testFail
+> Class:dummy.pkg.TheTest
 > Test case failed!
 > ------------------------
 
@@ -90,22 +97,6 @@ java.lang.ArithmeticException: / by zero
 > ------------------------
 
 > ------------------------
-> Test case:This should fail
-> Method:testFail
-> Class:dummy.pkg.TheTest
-info.simpll.simpletest.Tester$FailException
-	at info.simpll.simpletest.Tester.assertTrue(Tester.java:106)
-	at dummy.pkg.TheTest.testFail(TheTest.java:52)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at info.simpll.simpletest.Tester.executeTest(Tester.java:126)
-	at info.simpll.simpletest.Tester.main(Tester.java:214)
-> Test case failed!
-> ------------------------
-
-> ------------------------
 > Test case:one equals one
 > Method:testOneEqOne
 > Class:dummy.pkg.TheTest
@@ -113,7 +104,7 @@ info.simpll.simpletest.Tester$FailException
 > 
 > Time test started
 > Repeat count:50000
-> Time elapsed:597 mili seconds
+> Time elapsed:259 mili seconds
 > ------------------------
 
 > Tests 3 out of 5 passed
