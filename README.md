@@ -55,3 +55,66 @@ public class TheTest {
 ```
 
 Sample should be executed as `java info.simpll.simpletest.Tester dummy.pkg.TheTest`
+
+
+This should print
+
+```
+> ------------------------
+> Test case:unnamed
+> Method:testJustTrueUnnamed
+> Class:dummy.pkg.TheTest
+> Test case success!
+> ------------------------
+
+> ------------------------
+> Test case:This should fail
+> Method:testFailException
+> Class:dummy.pkg.TheTest
+java.lang.ArithmeticException: / by zero
+	at dummy.pkg.TheTest.testFailException(TheTest.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at info.simpll.simpletest.Tester.executeTest(Tester.java:126)
+	at info.simpll.simpletest.Tester.main(Tester.java:214)
+> Test case failed!
+> ------------------------
+
+> ------------------------
+> Test case:two not equal to one
+> Method:testTwoNotOne
+> Class:dummy.pkg.TheTest
+> Test case success!
+> ------------------------
+
+> ------------------------
+> Test case:This should fail
+> Method:testFail
+> Class:dummy.pkg.TheTest
+info.simpll.simpletest.Tester$FailException
+	at info.simpll.simpletest.Tester.assertTrue(Tester.java:106)
+	at dummy.pkg.TheTest.testFail(TheTest.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at info.simpll.simpletest.Tester.executeTest(Tester.java:126)
+	at info.simpll.simpletest.Tester.main(Tester.java:214)
+> Test case failed!
+> ------------------------
+
+> ------------------------
+> Test case:one equals one
+> Method:testOneEqOne
+> Class:dummy.pkg.TheTest
+> Test case success!
+> 
+> Time test started
+> Repeat count:50000
+> Time elapsed:597 mili seconds
+> ------------------------
+
+> Tests 3 out of 5 passed
+```
